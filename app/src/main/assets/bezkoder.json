@@ -1,0 +1,37 @@
+[
+  {
+    "name": "bezkoder",
+    "age": "26",
+    "messages": [
+      "hello",
+      "becoming zKoder"
+    ],
+    "image": "user1",
+    "image_big": "rest1",
+    "image_verified": "ic_verified",
+    "image_tag": "restaurant_tag",
+    "like": "10K",
+    "comment": "5K",
+    "share": "1K",
+    "tag": "Meat",
+    "disc": "restaurant1"
+  },
+  {
+    "name": "bezkoder Master",
+    "age": 30,
+    "messages": [
+      "I am Kotlin Master",
+      "still learning Kotlin"
+    ],
+    "image": "user2",
+    "image_big": "rest2",
+    "image_verified": "ic_verified2",
+    "image_tag": "restaurant_tag2",
+    "like": "1K",
+    "comment": "5K",
+    "share": "12K",
+    "tag": "Chicken",
+    "disc": "restaurant2"
+
+  }
+]

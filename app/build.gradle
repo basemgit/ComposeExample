@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -47,6 +50,9 @@ android {
 
 dependencies {
 
+    def lifeCycleVersion = '2.2.0'
+    def hiltLifeCycleVersion = '1.0.0-alpha03'
+
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation "androidx.compose.ui:ui:$compose_version"
     implementation "androidx.compose.material:material:$compose_version"
@@ -60,4 +66,23 @@ dependencies {
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
     // Navigation Compose
     implementation("androidx.navigation:navigation-compose:2.4.0-beta02")
+    implementation 'com.google.code.gson:gson:2.8.5'
+    //Hilt for di
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+    // Hilt ViewModel extension
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hiltLifeCycleVersion"
+    kapt "androidx.hilt:hilt-compiler:$hiltLifeCycleVersion"
+
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifeCycleVersion"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifeCycleVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifeCycleVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifeCycleVersion"
+
+    def activity_version = "1.1.0"
+    implementation "androidx.activity:activity-ktx:$activity_version"
+    implementation "androidx.fragment:fragment-ktx:$activity_version"
+
 }
